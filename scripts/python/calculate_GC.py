@@ -53,7 +53,7 @@ def process_fasta_file(file_path):
 def calculate_gc_percentages_in_directory(directory):
     for file_name in os.listdir(directory):
         file_path = os.path.join(directory, file_name)
-        if file_path.endswith(".fna"):
+        if file_path.endswith(".fasta"):
             if os.path.isfile(file_path):
                 gc_percentage = process_fasta_file(file_path)
                 file_name_without_extension = os.path.splitext(file_name)[0]
