@@ -41,6 +41,7 @@ Create environments:
 ```bash
 conda env create -f envs/antismash7.yaml
 conda env create -f envs/anvio-8.yaml
+conda env create -f envs/bakta.yaml
 conda env create -f envs/clinker.yaml
 ```
 
@@ -78,6 +79,18 @@ conda activate anvio-8
 ./scripts/python/run_anvio.py ./rawData/genomes/for_anvio/ ./derivedData/anvio_out/ Rothia 16
 conda deactivate
 ```
+
+---
+
+## Average Amino Acid Identity
+
+```bash
+conda activate baktka
+python3 ./scripts/python/run_bakta.py ./rawData/genomes/for_anvio/ ./derivedData/bakta_out/ 16
+conda deactivate
+```
+
+Then use the [AAI-profiler](http://ekhidna2.biocenter.helsinki.fi/AAI/) to determine AAI values.
 
 ---
 
